@@ -1,0 +1,9 @@
+config {
+  type: "incremental"
+}
+
+SELECT
+  fruit,
+  SUM(count) as count
+FROM ${ref("quickstart-source-3")}
+GROUP BY 1
